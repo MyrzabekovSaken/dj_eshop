@@ -1,0 +1,174 @@
+{% extends "store/base.html" %} 
+{% load static %} 
+{% block title%}Home{%endblock title %} 
+
+{% block banner-slider %}
+
+    <div
+    id="carouselExampleSlidesOnly"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    >
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="{% static "store/images/banner/b1.webp" %}" class="d-block w-100"
+        alt="banner image">
+        </div>
+        <div class="carousel-item">
+        <img src="{% static "store/images/banner/b2.webp" %}" class="d-block w-100"
+        alt="banner image">
+        </div>
+        <div class="carousel-item">
+        <img src="{% static "store/images/banner/b3.webp" %}" class="d-block w-100"
+        alt="banner image">
+        </div>
+        <div class="carousel-item">
+        <img src="{% static "store/images/banner/b4.webp" %}" class="d-block w-100"
+        alt="banner image">
+        </div>
+    </div>
+    </div>
+
+{% endblock banner-slider %} 
+
+{% block information %}
+
+    <div class="container">
+    <div class="row bg-secondary text-center text-white p-5 border-bottom shadow">
+        <h1>Products</h1>
+        <small class="f-5">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sodales
+        leo eu massa faucibus fringilla. Quisque interdum, tortor vitae feugiat
+        feugiat, magna arcu malesuada quam, sed lobortis nibh tellus at nibh. Nam
+        blandit massa vel nisl euismod, vitae convallis ipsum tincidunt. Donec
+        vitae lacus euismod, blandit orci vel, pellentesque libero. Suspendisse
+        augue nulla, consequat ut pharetra in, cursus quis sem. Suspendisse et est
+        eros. Sed vitae tempus nibh. Curabitur cursus, quam non vehicula
+        ultricies, purus lectus vestibulum tellus, in bibendum ex sapien eget
+        nisl. Duis quis libero a massa faucibus porta nec vitae elit. Vivamus at
+        lacus ultrices lectus sollicitudin posuere. Pellentesque et elit sit amet
+        elit dapibus pulvinar. Sed porttitor eros et facilisis imperdiet. Sed vel
+        metus in mi venenatis finibus eget vitae dolor.
+        </small>
+    </div>
+    </div>
+
+{% endblock information %} 
+
+{% block main-content %}
+
+    <div class="container">
+        <h2 class="text-center">Categories</h2>
+        <br><br>
+        <div class="row container">
+            <div class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s;
+            animation-name: none;">
+                <div class="goodnesssec yellow yellow">
+                    <a href="{% url 'category' 'babyfood' %}">
+                        <div class="godnessseccont text-center">
+                            <img src="{% static 'store/images/product/babyfood.jpg' %}" alt="" class="image-responsive center-block img-fluid">
+                            <p class="milkpro">Baby food</p>
+                        </div>
+                    </a>          
+                </div>    
+            </div>
+
+            <div class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s;
+            animation-name: none;">
+                <div class="goodnesssec yellow violet">
+                    <a href="{% url 'category' 'breads' %}">
+                        <div class="godnessseccont text-center">
+                            <img src="{% static 'store/images/product/bread.jpg' %}" alt="" class="image-responsive center-block img-fluid">
+                            <p class="milkpro">Breads</p>
+                        </div>
+                    </a>          
+                </div>    
+            </div>
+
+            <div class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s;
+            animation-name: none;">
+                <div class="goodnesssec yellow blue">
+                    <a href="{% url 'category' 'drinks' %}">
+                        <div class="godnessseccont text-center">
+                            <img src="{% static 'store/images/product/water.jpg' %}" alt="" class="image-responsive center-block img-fluid">
+                            <p class="milkpro">Drinks</p>
+                        </div>
+                    </a>          
+                </div>    
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="row container">
+            <div class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s;
+            animation-name: none;">
+                <div class="goodnesssec yellow yellow">
+                    <a href="{% url 'category' 'fruits' %}">
+                        <div class="godnessseccont text-center">
+                            <img src="{% static 'store/images/product/fruits.jpg' %}" alt="" class="image-responsive center-block img-fluid">
+                            <p class="milkpro">Fruits</p>
+                        </div>
+                    </a>          
+                </div>    
+            </div>
+
+            <div class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s;
+            animation-name: none;">
+                <div class="goodnesssec yellow violet">
+                    <a href="{% url 'category' 'meat' %}">
+                        <div class="godnessseccont text-center">
+                            <img src="{% static 'store/images/product/meats.webp' %}" alt="" class="image-responsive center-block img-fluid">
+                            <p class="milkpro">Meat</p>
+                        </div>
+                    </a>          
+                </div>    
+            </div>
+
+            <div class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s;
+            animation-name: none;">
+                <div class="goodnesssec yellow yellow">
+                    <a href="{% url 'category' 'readymeal' %}">
+                        <div class="godnessseccont text-center">
+                            <img src="{% static 'store/images/product/ready.jpg' %}" alt="" class="image-responsive center-block img-fluid">
+                            <p class="milkpro">Ready meal</p>
+                        </div>
+                    </a>          
+                </div>    
+            </div>
+
+            <br><br>
+
+            <div class="col-md-4 col-sm-4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s;
+            animation-name: none;">
+                <div class="goodnesssec yellow smbg">
+                    <a href="{% url 'category' 'vegetables' %}">
+                        <div class="godnessseccont text-center">
+                            <img src="{% static 'store/images/product/vegetables.webp' %}" alt="" class="image-responsive center-block img-fluid">
+                            <p class="milkpro">Vegetables</p>
+                        </div>
+                    </a>          
+                </div>    
+            </div>
+
+        </div>
+
+    </div>
+    <br />
+    <br />
+    
+{% endblock main-content %}

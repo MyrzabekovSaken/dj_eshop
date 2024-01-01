@@ -1,0 +1,64 @@
+  {% extends "store/base.html" %} 
+  {% load static %} 
+  {% block title%}Category{%endblock title %} 
+
+  {% block main-content %}
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="list-group">
+          {% for value in title %}
+          <a
+            href="{% url "category_title" value.title %}"
+            class="list-group-item list-group-item-action"
+            aria-content="true"
+            >{{ value.title }}</a
+          >
+          {% endfor %}
+        </div>
+        <br>
+        <div class="col text-center mb-4">
+          <form method="get">
+              <div class="form-group">
+                  <label for="sort">Sort by:</label>
+                  <select id="sort" name="order_by" class="form-control">
+                      <option value="title" {% if request.GET.order_by == "title" %}selected{% endif %}>Title</option>
+                      <option value="price" {% if request.GET.order_by == "price" %}selected{% endif %}>Price</option>
+                  </select>
+                  <select name="order_direction" class="form-control">
+                      <option value="asc" {% if request.GET.order_direction == "asc" %}selected{% endif %}>Asc</option>
+                      <option value="desc" {% if request.GET.order_direction == "desc" %}selected{% endif %}>Desc</option>
+                  </select>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-primary">Sort</button>
+          </form>
+      </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="row">
+          
+          {% for prod in product %}
+          <div class="col text-center mb-4">
+            <a href="{% url "product_detail" prod.id %}" class="btn">
+              <div>
+                <img
+                  src="{{ prod.product_image.url }}"
+                  width="250px"
+                  height="250px"
+                />
+                <div class="fw-bold">{{ prod.title }}</div>
+                <div class="fw-bold text-danger">
+                  {{ prod.selling_price }} $
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock main-content %}
