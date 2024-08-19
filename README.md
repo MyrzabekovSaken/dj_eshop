@@ -18,7 +18,7 @@ Project is created with:
 * Razorpay
 	
 ## Setup
-To run this project, install dependencies using poetry:
+To run this project and install dependencies using poetry:
 
 ```
 poetry install
@@ -26,5 +26,5 @@ poetry install
 
 Run project
 ```
-python manage.py runserver
+poetry run python manage.py runserver
 ```
